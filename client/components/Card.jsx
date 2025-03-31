@@ -52,7 +52,7 @@ const Card = ({ courseName, amount, description, imageUrl }) => {
 
     //after create order
     const paymentObject = new window.Razorpay({
-      key : "rzp_test_eV5MfFOc9KWsdo",
+      key : " //////////add razorpay key here/////////////",
       order_id : respone.data.id,
       ...respone.data,
       handler : function(response){
