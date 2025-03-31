@@ -1,0 +1,28 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type" : "module",
+  "scripts": {
+    "test": "nodemon index.js",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "dev:server": "nodemon server.js",
+    "dev:client": "cd ../frontend && npm start",
+    "dev:all": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build": "cd ../frontend && npm run build",
+    "heroku-postbuild": "cd ../frontend && npm install && npm run build",
+    "heroku-prebuild": "cd ../frontend && npm install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9",
+    "razorpay": "^2.9.6"
+  }
+}
